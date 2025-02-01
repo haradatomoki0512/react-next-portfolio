@@ -5,7 +5,7 @@ import Pagination from '@/app/_components/Pagination';
 import { NEWS_LIST_LIMIT } from '@/app/_constants';
 
 type Props = {
-  params: {
+  params: Promise<{
     current: string;
     id: string;
   };

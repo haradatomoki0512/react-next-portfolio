@@ -6,7 +6,7 @@ import Category from '@/app/_components/Category';
 import { NEWS_LIST_LIMIT } from '@/app/_constants';
 
 type Props = {
-  params: {
+  params: Promise<{
     id: string;
   };
 };

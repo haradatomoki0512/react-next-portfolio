@@ -4,7 +4,7 @@ import NewsList from '@/app/_components/NewsList';
 import SearchField from '@/app/_components/SearchField';
 
 type Props = {
-  searchParams: {
+  searchParams: Promise<{
     q?: string;
   };
 };
