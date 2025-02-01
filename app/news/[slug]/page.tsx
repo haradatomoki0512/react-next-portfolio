@@ -5,8 +5,8 @@ import ButtonLink from '@/app/_components/ButtonLink/index';
 import styles from './page.module.css';
 
 type Props = {
-  params: Promise<{ slug: string }>;
-  searchParams: Promise<{ dk?: string }>;
+  params: { slug: string };
+  searchParams: { dk?: string };
 };
 
 export default async function Page({ params, searchParams }: Props) {
@@ -18,7 +18,9 @@ export default async function Page({ params, searchParams }: Props) {
   return (
     <main className={styles.main}>
       <Article article={data} />
-      <ButtonLink href="/news" label="Back to News List" />
+      <ButtonLink href="/news">
+        Back to News List
+      </ButtonLink>
     </main>
   );
 }

@@ -16,15 +16,13 @@ export default async function Home() {
     <>
       {/* 画像をページ上部に追加 */}
       <div className={styles.logoContainer}>
-      <Image
-  src="/logo.png"
-  alt="Logo"
-  width={400} /* 幅 */
-  height={550} /* 高さ */
-  priority
-/>
-
-
+        <Image
+          src="/logo.png"
+          alt="Logo"
+          width={400} /* 幅 */
+          height={550} /* 高さ */
+          priority
+        />
       </div>
       <section className={styles.top}>
         <div>
