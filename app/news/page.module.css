@@ -1,0 +1,34 @@
+.logoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  .top {
+    position: relative;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+  }
+  
+  .news {
+    margin-top: 20px;
+  }
+  
+  .newsTitle {
+    font-size: 1.5rem;
+  }
+  
+  .newsLink {
+    text-align: center;
+    margin-top: 10px;
+  }
+  

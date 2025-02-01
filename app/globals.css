@@ -1,0 +1,92 @@
+:root {
+  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+  --color-text-main: #333;
+  --color-text-sub: #999;
+  --color-text-unpainted: #fff;
+  --color-text-error: #f33;
+  --color-bg-main: #fff;
+  --color-bg-sub: #f3f3f3;
+  --color-bg-code: #fafafa;
+  --color-bg-painted: #333;
+  --color-border-dark: #333;
+  --color-border: #ddd;
+  --color-border-light: #f3f3f3;
+  --color-current: #eee;
+  --color-button-primary: #333;
+  --border-radius: 4px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic,
+    "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo,
+    sans-serif;
+  color: var(--color-text-main);
+  line-height: 1.8;
+}
+
+code {
+  font-family: menlo, inconsolata, monospace;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+body {
+  background: linear-gradient(
+    135deg,
+    #87ceeb,
+    #ffffff
+  ); /* 水色から白へのグラデーション */
+  margin: 0; /* ページ余白をリセット */
+  padding: 0; /* ページパディングをリセット */
+  font-family: sans-serif; /* 全体のフォント設定 */
+  min-height: 100vh; /* 背景を画面全体に適用 */
+}/* 川の滑らかな流れを表現するアニメーション */
+@keyframes riverFlow {
+  0% {
+    background-position: 0% 0%; /* 濃い水色が上流から始まる */
+  }
+  25% {
+    background-position: 50% 50%; /* 薄い水色が下流の中間に到達 */
+  }
+  50% {
+    background-position: 100% 100%; /* 薄い水色が下流へ到達 */
+  }
+  75% {
+    background-position: 50% 50%; /* 再び濃い水色が中間に戻る */
+  }
+  100% {
+    background-position: 0% 0%; /* 濃い水色が上流に戻る */
+  }
+}
+
+body {
+  background: linear-gradient(135deg, #1e3a5f, #4169e1, #87ceeb, #4169e1, #1e3a5f);
+  /* 濃い水色→薄い水色→濃い水色 */
+  background-size: 300% 300%; /* 広範囲で動きを滑らかに */
+  animation: riverFlow 30s linear infinite; /* 30秒で1サイクル、途切れないループ */
+  margin: 0; /* ページ余白をリセット */
+  padding: 0; /* ページパディングをリセット */
+  font-family: sans-serif; /* 全体のフォント設定 */
+  min-height: 100vh; /* 背景を画面全体に適用 */
+}

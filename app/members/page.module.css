@@ -1,0 +1,42 @@
+/* 画像 */
+.aboutImage {
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 20px;
+  border: 1px solid black; /* 画像の周囲に黒い線を追加 */
+}
+
+/* タイトル */
+.aboutTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+/* 本文 */
+.aboutText {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* スマホ対応 */
+@media (max-width: 640px) {
+  .aboutImage {
+    width: 160px;
+    height: 160px;
+    border: 3px solid black; /* スマホでは少し細めの線に */
+  }
+
+  .aboutTitle {
+    font-size: 1.8rem;
+  }
+
+  .aboutText {
+    font-size: 1rem;
+  }
+}

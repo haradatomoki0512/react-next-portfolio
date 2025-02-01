@@ -1,0 +1,77 @@
+/* リンクのデフォルトスタイル */
+.navLink {
+  color: #000; /* 通常時のテキスト色 (黒) */
+  text-decoration: none; /* 下線を消す */
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease; /* 色とスケールの変化を滑らかに */
+}
+
+/* ホバー時のスタイル */
+.navLink:hover {
+  color: #fff; /* ホバー時に文字色を白に変更 */
+  transform: scale(1.1); /* 拡大効果 */
+}
+
+/* アンダーラインのアニメーション */
+.navLink::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: #fff; /* アンダーラインの色 (白) */
+  transition: width 0.3s ease; /* アンダーラインの広がりを滑らかに */
+}
+
+.navLink:hover::after {
+  width: 100%; /* ホバー時にアンダーラインが広がる */
+}
+
+/* リンクリストのスタイル */
+.items {
+  display: flex;
+  color: #fff;
+  gap: 40px;
+}
+
+/* ボタンのスタイル */
+.button {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .nav {
+    display: none;
+  }
+
+  .nav.open {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-bg-painted);
+    color: var(--color-text-unpainted);
+    padding: 24px 16px;
+  }
+
+  .items {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .button {
+    display: flex;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .close {
+    position: absolute;
+    top: 24px;
+    right: 16px;
+  }
+}
