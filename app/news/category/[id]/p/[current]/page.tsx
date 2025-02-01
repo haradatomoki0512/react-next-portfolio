@@ -5,13 +5,14 @@ import Pagination from '@/app/_components/Pagination';
 import { NEWS_LIST_LIMIT } from '@/app/_constants';
 
 type Props = {
-  params: {
+  params: Promise<{
     current: string;
     id: string;
-  };
+  }>;
 };
 
-export default async function Page({ params }: Props) {
+export default async function Page(props: Props) {
+  const params = await props.params;
   const current = parseInt(params.current as string, 10);
 
   if (Number.isNaN(current) || current < 1) {

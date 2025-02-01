@@ -5,22 +5,21 @@ import ButtonLink from '@/app/_components/ButtonLink/index';
 import styles from './page.module.css';
 
 type Props = {
-  params: { slug: string };
-  searchParams: { dk?: string };
+  params: Promise<{ slug: string }>;
+  searchParams: Promise<{ dk?: string }>;
 };
 
-export default async function Page({ params, searchParams }: Props) {
-  const { slug } = await params; // paramsをawait
-  const { dk } = await searchParams; // searchParamsをawait
-
-  const data = await getNewsDetail(slug, { draftKey: dk }).catch(notFound);
+export default async function Page(props: Props) {
+  const params = await props.params;
+  const searchParams = await props.searchParams;
+  const data = await getNewsDetail(params.slug, { draftKey: searchParams.dk }).catch(notFound);
 
   return (
-    <main className={styles.main}>
+    <div className={styles.main}>
       <Article article={data} />
       <ButtonLink href="/news">
         Back to News List
       </ButtonLink>
-    </main>
+    </div>
   );
 }
